@@ -2,6 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
+use App\Models\Wallet;
+use App\Models\WalletType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +21,9 @@ class WalletFactory extends Factory
     {
         return [
             //
+            'user_id' => User::inRandomOrder()->first(),
+            'wallet_type_id' => WalletType::inRandomOrder()->first(),
+            'balance' => rand(3,20) * 1000,
         ];
     }
 }

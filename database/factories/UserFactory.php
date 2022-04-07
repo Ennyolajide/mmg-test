@@ -2,6 +2,11 @@
 
 namespace Database\Factories;
 
+use App\Models\Transaction;
+use App\Models\User;
+use App\Models\UserInfo;
+use App\Models\Wallet;
+use App\Models\WalletType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -40,3 +45,6 @@ class UserFactory extends Factory
         });
     }
 }
+
+
+

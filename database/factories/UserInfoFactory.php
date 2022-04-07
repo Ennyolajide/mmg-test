@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,10 @@ class UserInfoFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'date_of_birth' => $this->faker->date(),
+            'phone' => $this->faker->e164PhoneNumber,
+            'address' => $this->faker->address,
         ];
     }
 }
